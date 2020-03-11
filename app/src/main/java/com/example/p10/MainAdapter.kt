@@ -4,8 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.screen.view.*
 
-class MainAdapter : RecyclerView.Adapter<GetViewHolder>(){
+class MainAdapter(val paginaWeb: PaginaWeb) : RecyclerView.Adapter<GetViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GetViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val cellForRow = layoutInflater.inflate(R.layout.screen, parent,false)
@@ -13,10 +15,16 @@ class MainAdapter : RecyclerView.Adapter<GetViewHolder>(){
     }
 
     override fun getItemCount(): Int {
-        return 3
+        return paginaWeb.items.count()
     }
 
     override fun onBindViewHolder(holder: GetViewHolder, position: Int) {
+        val items = paginaWeb.items.get(position)
+        holder.view.name_Repositorio.text = items.repos_url
+        holder.view.autor_Name.text = items.name
+
+        val itemsProfileImageView = holder.view.imageView
+        Picasso.get().load(items.avatar_url)
     }
 
 

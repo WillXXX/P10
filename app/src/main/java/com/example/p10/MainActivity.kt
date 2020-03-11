@@ -13,6 +13,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         rv_main.layoutManager = LinearLayoutManager(this)
-        rv_main.adapter = MainAdapter()
+//        rv_main.adapter = MainAdapter()
     }
 }
+
+
+
+
+
+
+
+//https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1).
