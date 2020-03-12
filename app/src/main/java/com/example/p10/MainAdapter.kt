@@ -8,6 +8,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.screen.view.*
 
 class MainAdapter(val paginaWeb: PaginaWeb) : RecyclerView.Adapter<GetViewHolder>(){
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GetViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val cellForRow = layoutInflater.inflate(R.layout.screen, parent,false)
@@ -24,7 +25,7 @@ class MainAdapter(val paginaWeb: PaginaWeb) : RecyclerView.Adapter<GetViewHolder
         holder.view.autor_Name.text = items.name
 
         val itemsProfileImageView = holder.view.imageView
-        Picasso.get().load(items.avatar_url)
+        Picasso.get().load(items.avatar_url.)
     }
 
 
