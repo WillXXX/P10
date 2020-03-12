@@ -20,6 +20,7 @@ class MainAdapter(val paginaWeb: PaginaWeb) : RecyclerView.Adapter<GetViewHolder
         return paginaWeb.items.count()
     }
 
+//fazendo ligações entre screen e MainAdapter
     override fun onBindViewHolder(holder: GetViewHolder, position: Int) {
         val items = paginaWeb.items.get(position)
         holder.view.name_Repositorio.text = items.repos_url
