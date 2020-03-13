@@ -29,7 +29,6 @@ class MainAdapter(val paginaWeb: PaginaWeb) : RecyclerView.Adapter<GetViewHolder
 
         val ownerProfileImageView = holder.view.imageView
         Picasso.get().load(items.owner.avatar_url).into(ownerProfileImageView)
-
     }
 
 
