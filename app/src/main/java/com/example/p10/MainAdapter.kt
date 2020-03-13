@@ -27,8 +27,9 @@ class MainAdapter(val paginaWeb: PaginaWeb) : RecyclerView.Adapter<GetViewHolder
         holder.view.autor_Name.text = items.name
         holder.view.n_Views.text = items.forks_count.toString()
 
-//        val itemsImageView= holder.view.imageView
-//        Picasso.get().load(items.avatar_url).into(itemsImageView)
+        val ownerProfileImageView = holder.view.imageView
+        Picasso.get().load(items.owner.avatar_url).into(ownerProfileImageView)
+
     }
 
 
