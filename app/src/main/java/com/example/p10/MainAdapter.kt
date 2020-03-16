@@ -23,9 +23,12 @@ class MainAdapter(val paginaWeb: PaginaWeb) : RecyclerView.Adapter<GetViewHolder
 //fazendo ligações entre screen e MainAdapter
     override fun onBindViewHolder(holder: GetViewHolder, position: Int) {
         val items = paginaWeb.items.get(position)
-        holder.view.name_Repositorio.text = items.full_name
+        holder.view.nomeReposit.text = items.id.toString()
+        holder.view.descReposit.text = items.node_id
         holder.view.autor_Name.text = items.name
-        holder.view.n_Views.text = items.forks_count.toString()
+        holder.view.nome_Completo.text = items.full_name
+        holder.view.f_Count.text = items.forks_count.toString()
+        holder.view.starCount.text = items.owner.stargazers_count.toString()
 
         val ownerProfileImageView = holder.view.imageView
         Picasso.get().load(items.owner.avatar_url).into(ownerProfileImageView)
