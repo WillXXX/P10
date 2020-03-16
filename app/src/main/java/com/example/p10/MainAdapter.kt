@@ -40,7 +40,6 @@ class MainAdapter(val paginaWeb: PaginaWeb) : RecyclerView.Adapter<GetViewHolder
 //        Picasso.get().load(items.owner.avatar_url).into(ownerProfileImageView2)
     }
 
-
 }
 
 class GetViewHolder(val view: View) : RecyclerView.ViewHolder(view){
