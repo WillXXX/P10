@@ -105,4 +105,15 @@
         app:layout_constraintTop_toBottomOf="@+id/descReposit"
         app:srcCompat="@drawable/icons_fork_fork" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="28dp"
+        android:background="#656464"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/starCount" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

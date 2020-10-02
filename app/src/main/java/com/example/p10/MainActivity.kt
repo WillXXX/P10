@@ -19,10 +19,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//click para chamar segunda tela
+/*     click para chamar segunda tela
         imageView.setOnClickListener {
 
-        }
+        }*/
 
         rv_main.layoutManager = LinearLayoutManager(this)
 //        rv_main.adapter =
@@ -55,10 +55,10 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-//Função que abre segunda atividade
+/*//Função que abre segunda atividade
     private fun openNextActivity(){
         val intent = Intent(this, P_request::class.java)
-    }
+    }*/
 
 }
 
